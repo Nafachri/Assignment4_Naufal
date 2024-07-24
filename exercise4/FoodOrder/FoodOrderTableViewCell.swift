@@ -10,7 +10,7 @@ import UIKit
 class FoodOrderTableViewCell: UITableViewCell {
 
   @IBOutlet weak var foodNameLabel: UILabel!
-  
+  @IBOutlet weak var foodImage: UIImageView!
   @IBOutlet weak var createDateLabel: UILabel!
   @IBOutlet weak var foodPriceLabel: UILabel!
   @IBOutlet weak var foodCategoryLabel: UILabel!
@@ -23,10 +23,7 @@ class FoodOrderTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
     }
-  
-//  func populate(model: Food) {
-//    foodNameLabel.text = model.foodName
-//  }
+
     
   override func prepareForReuse() {
     super.prepareForReuse()

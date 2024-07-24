@@ -17,7 +17,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="332" height="198"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="food" translatesAutoresizingMaskIntoConstraints="NO" id="KdQ-Dg-Ka2">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KdQ-Dg-Ka2">
                         <rect key="frame" x="8" y="16" width="110" height="110"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="110" id="fA5-5m-vNm"/>
@@ -92,6 +92,7 @@
                 <outlet property="createDateLabel" destination="D3y-4q-0L2" id="EOp-tn-cNE"/>
                 <outlet property="foodCategoryLabel" destination="kMj-Ig-B8H" id="mTM-YO-yfK"/>
                 <outlet property="foodDescLabel" destination="Zjn-u4-JVb" id="9U3-ga-hff"/>
+                <outlet property="foodImage" destination="KdQ-Dg-Ka2" id="gBS-U8-aFw"/>
                 <outlet property="foodNameLabel" destination="hMN-UV-rBC" id="VWc-vv-b0J"/>
                 <outlet property="foodPriceLabel" destination="e7T-D9-6ae" id="b1p-Y4-p5Q"/>
             </connections>
@@ -99,7 +100,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="food" width="110" height="110"/>
         <systemColor name="systemGray2Color">
             <color red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

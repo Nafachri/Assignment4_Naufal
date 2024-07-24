@@ -14,11 +14,12 @@ class SuccessChangePasswordViewController: UIViewController {
       
       
       DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [weak self] in
-        
+
         let appDelegate = UIApplication.shared.delegate as? AppDelegate
-        let navVC = appDelegate?.window?.rootViewController as? UINavigationController
-        let tabBar = navVC?.topViewController as? TabBarViewController
-        tabBar?.selectedIndex = 1
+        let nav = appDelegate?.window?.rootViewController as? UINavigationController
+    
+//        let tabBar = TabBarViewController()        
+        nav?.popViewController(animated: false)
         self?.dismiss(animated: true)
       }
       

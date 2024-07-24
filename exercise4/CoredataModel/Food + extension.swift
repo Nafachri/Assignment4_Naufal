@@ -17,28 +17,28 @@ import Foundation
 //  }
 //}
 
-extension FoodModel {
-  func food() -> Food {
-    Food(
-      foodName: foodName,
-      foodDescription: foodDescription,
-      foodCategory: foodCategory,
-      foodPrice: foodPrice,
-      isComplete: isComplete,
-      createDate: createDate
-    )
-  }
-}
-
-extension Food {
-  func toDictionary() -> [String: Any] {
-    [
-      "foodName": foodName ?? "",
-      "foodDescription": foodDescription ?? "",
-      "foodCategory": foodCategory ?? "",
-      "foodPrice": foodPrice ?? 0.0,
-      "isComplete": isComplete ?? false,
-      "createDate": createDate ?? .now
-    ]
-  }
-}
+//extension FoodModel {
+//  func food() -> FoodModel {
+//    FoodModel(
+//      foodName: foodName,
+//      foodDescription: foodDescription,
+//      foodCategory: foodCategory,
+//      foodPrice: foodPrice,
+//      isComplete: isComplete,
+//      createDate: createDate
+//    )
+//  }
+//}
+//
+//extension FoodModel {
+//  func toDictionary() -> [String: Any] {
+//    [
+//      "foodName": foodName ?? "",
+//      "foodDescription": foodDescription ?? "",
+//      "foodCategory": foodCategory ?? "",
+//      "foodPrice": foodPrice ?? 0.0,
+//      "isComplete": isComplete ?? false,
+//      "createDate": createDate ?? .now
+//    ]
+//  }
+//}

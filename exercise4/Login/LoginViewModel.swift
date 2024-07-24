@@ -17,3 +17,4 @@ class LoginViewModel : NSObject {
     self.password = password
   }
 }
+

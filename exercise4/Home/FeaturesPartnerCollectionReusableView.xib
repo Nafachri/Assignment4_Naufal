@@ -18,27 +18,11 @@
                     <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cES-96-wTe">
-                            <rect key="frame" x="0.0" y="0.0" width="44.333333333333336" height="50"/>
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4T2-F1-LFk">
-                            <rect key="frame" x="268.66666666666669" y="0.0" width="51.333333333333314" height="50"/>
-                            <color key="tintColor" red="0.93333333330000001" green="0.65490196079999996" blue="0.20392156859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain">
-                                <attributedString key="attributedTitle">
-                                    <fragment content="Button">
-                                        <attributes>
-                                            <color key="NSColor" red="0.93333333333333335" green="0.65490196078431373" blue="0.20392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="9" name="HelveticaNeue"/>
-                                            <font key="NSOriginalFont" size="12" name="Helvetica"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                            </buttonConfiguration>
-                        </button>
                     </subviews>
                 </stackView>
             </subviews>
@@ -51,7 +35,6 @@
                 <constraint firstAttribute="bottom" secondItem="JWQ-55-mFZ" secondAttribute="bottom" id="sqn-vP-B2W"/>
             </constraints>
             <connections>
-                <outlet property="headerButton" destination="4T2-F1-LFk" id="qqx-cg-Tnm"/>
                 <outlet property="headerLabel" destination="cES-96-wTe" id="JBu-DR-C2f"/>
             </connections>
             <point key="canvasLocation" x="-20" y="20"/>

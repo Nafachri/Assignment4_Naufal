@@ -9,6 +9,10 @@ import UIKit
 
 class PaymentItemTableViewCell: UITableViewCell {
 
+  @IBOutlet weak var foodDescriptionLabel: UILabel!
+  @IBOutlet weak var foodPriceLabel: UILabel!
+  @IBOutlet weak var foodNameLabel: UILabel!
+  @IBOutlet weak var foodQuantityLabel: UILabel!
   @IBOutlet weak var foodItemUIView: UIView!
   override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,5 +23,7 @@ class PaymentItemTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
+  
+
     
 }

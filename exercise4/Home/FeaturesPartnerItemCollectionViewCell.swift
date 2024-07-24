@@ -9,8 +9,16 @@ import UIKit
 
 class FeaturesPartnerItemCollectionViewCell: UICollectionViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
+  @IBOutlet weak var imageView: UIImageView!
+  
+  @IBOutlet weak var foodName: UILabel!
+  
+  @IBOutlet weak var addressLabel: UILabel!
+  
+  func populate(image: String?, food: String?, address: String?) {
+    self.imageView.image = UIImage(named: image ?? "") ?? UIImage(named: "food 1")
+    foodName.text = food
+    addressLabel.text = address
+  }
 
 }

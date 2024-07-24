@@ -70,7 +70,11 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="foodDescriptionLabel" destination="Q1w-dF-tNd" id="tfh-an-5hw"/>
                 <outlet property="foodItemUIView" destination="gtk-d7-h7c" id="rap-8f-nGv"/>
+                <outlet property="foodNameLabel" destination="aav-nG-l52" id="k8e-aL-1Ls"/>
+                <outlet property="foodPriceLabel" destination="DNx-oq-yVr" id="cHB-JM-uea"/>
+                <outlet property="foodQuantityLabel" destination="RYe-3f-gDe" id="4oV-Xu-lBo"/>
             </connections>
             <point key="canvasLocation" x="104" y="20"/>
         </tableViewCell>

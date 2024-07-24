@@ -9,6 +9,7 @@ import Foundation
 import CoreData
 
 extension CoreDataManager {
+  
   func create<T: NSManagedObject>(object: T, properties: [String: Any]) throws {
     let entityName = String(describing: T.self)
     guard let newEntity = NSEntityDescription.insertNewObject(forEntityName: entityName, into: context) as? T else {
@@ -38,6 +39,7 @@ extension CoreDataManager {
     return newEntity
   }
   
+  @discardableResult
   func fetch<T: NSManagedObject>(entity: T.Type, predicate: NSPredicate? = nil) throws -> [T] {
     let entityName = String(describing: entity)
     let fetchRequest = NSFetchRequest<T>(entityName: entityName)

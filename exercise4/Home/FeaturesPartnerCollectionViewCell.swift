@@ -10,9 +10,22 @@ import UIKit
 class FeaturesPartnerCollectionViewCell: UICollectionViewCell {
   @IBOutlet weak var collectionView: UICollectionView!
   
+  var foods: [FoodModel] = [] {
+    didSet {
+      collectionView.reloadData()
+    }
+  }
+  
+  override func prepareForReuse() {
+    super.prepareForReuse()
+    foods = []
+    collectionView.reloadData()
+  }
+  
   override func awakeFromNib() {
     super.awakeFromNib()
     setup()
+    
   }
   
   func setup() {
@@ -25,12 +38,25 @@ class FeaturesPartnerCollectionViewCell: UICollectionViewCell {
 extension FeaturesPartnerCollectionViewCell: UICollectionViewDataSource {
   
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return 4
+    return foods.count
   }
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    let food = foods[indexPath.row]
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "features_item_cell", for: indexPath) as! FeaturesPartnerItemCollectionViewCell
+    cell.populate(image: food.image, food: food.foodName, address: food.address)
     return cell
+  }
+  
+  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    
+    let selectedItem = foods[indexPath.row]
+    let foodDetailVC = FoodDetailViewController(selectedItem: selectedItem)
+    _ = UINavigationController(rootViewController: foodDetailVC)
+    
+    let appDelegate = UIApplication.shared.delegate as? AppDelegate
+    let nav = appDelegate?.window?.rootViewController as? UINavigationController
+    nav?.pushViewController(foodDetailVC, animated: true)
   }
   
   

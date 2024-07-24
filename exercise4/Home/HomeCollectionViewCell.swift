@@ -9,8 +9,13 @@ import UIKit
 
 class HomeCollectionViewCell: UICollectionViewCell {
 
-    override func awakeFromNib() {
+  @IBOutlet weak var foodNameLabel: UILabel!
+  @IBOutlet weak var foodImageView: UIImageView!
+  @IBOutlet weak var foodCategoryLabel: UILabel!
+  
+  override func awakeFromNib() {
         super.awakeFromNib()
+    
     }
 
 }

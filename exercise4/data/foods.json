@@ -1,0 +1,122 @@
+[
+    {
+        "address": "Jl. Sudirman No.1, Jakarta",
+        "image": "sateayam",
+        "createDate": "2024-07-22",
+        "foodCategory": "Grilled",
+        "foodDescription": "Traditional Indonesian skewered and grilled meat.",
+        "foodName": "Sate Ayam",
+        "foodPrice": 15000,
+        "isComplete": true
+    },
+    {
+        "address": "Jl. Malioboro No.5, Yogyakarta",
+        "image": "gudeg",
+        "createDate": "2024-07-22",
+        "foodCategory": "Stew",
+        "foodDescription": "Sweet jackfruit stew served with rice and various sides.",
+        "foodName": "Gudeg",
+        "foodPrice": 10000,
+        "isComplete": true
+    },
+    {
+        "address": "Jl. Raya Kuta No.10, Bali",
+        "image": "babiguling",
+        "createDate": "2024-07-22",
+        "foodCategory": "Roast",
+        "foodDescription": "Balinese roast pork served with rice and vegetables.",
+        "foodName": "Babi Guling",
+        "foodPrice": 70000,
+        "isComplete": true
+    },
+    {
+        "address": "Jl. Asia Afrika No.8, Bandung",
+        "image": "batagor",
+        "createDate": "2024-07-22",
+        "foodCategory": "Fried",
+        "foodDescription": "Fried fish dumplings served with peanut sauce.",
+        "foodName": "Batagor",
+        "foodPrice": 15000,
+        "isComplete": true
+    },
+    {
+        "address": "Jl. Diponegoro No.15, Surabaya",
+        "image": "rawon",
+        "createDate": "2024-07-22",
+        "foodCategory": "Soup",
+        "foodDescription": "Beef black soup with rich, dark broth.",
+        "foodName": "Rawon",
+        "foodPrice": 25000,
+        "isComplete": true
+    },
+    {
+        "address": "Jl. Gajah Mada No.3, Medan",
+        "image": "sotomedan",
+        "createDate": "2024-07-22",
+        "foodCategory": "Soup",
+        "foodDescription": "Spicy chicken soup with coconut milk.",
+        "foodName": "Soto Medan",
+        "foodPrice": 25000,
+        "isComplete": true
+    },
+    {
+        "address": "Jl. Merdeka No.7, Palembang",
+        "image": "pempek",
+        "createDate": "2024-07-22",
+        "foodCategory": "Fried",
+        "foodDescription": "Fish cake served with spicy vinegar sauce.",
+        "foodName": "Pempek",
+        "foodPrice": 30000,
+        "isComplete": true
+    },
+    {
+        "address": "Jl. Pattimura No.12, Ambon",
+        "image": "ikanbakar",
+        "createDate": "2024-07-22",
+        "foodCategory": "Grilled",
+        "foodDescription": "Grilled fish with spices, served with sambal.",
+        "foodName": "Ikan Bakar",
+        "foodPrice": 30000,
+        "isComplete": true
+    },
+    {
+        "address": "Jl. Sultan Hasanuddin No.4, Makassar",
+        "image": "cotomakassar",
+        "createDate": "2024-07-22",
+        "foodCategory": "Soup",
+        "foodDescription": "Traditional beef soup with peanut sauce.",
+        "foodName": "Coto Makassar",
+        "foodPrice": 45000,
+        "isComplete": true
+    },
+    {
+        "address": "Jl. Teuku Umar No.11, Banda Aceh",
+        "image": "mieaceh",
+        "createDate": "2024-07-22",
+        "foodCategory": "Noodles",
+        "foodDescription": "Spicy stir-fried noodles with beef or seafood.",
+        "foodName": "Mie Aceh",
+        "foodPrice": 20000,
+        "isComplete": true
+    },
+    {
+        "address": "Jl. A. Yani No.13, Pontianak",
+        "image": "choipan",
+        "createDate": "2024-07-22",
+        "foodCategory": "Snack",
+        "foodDescription": "Steamed dumplings filled with bamboo shoots.",
+        "foodName": "Choipan",
+        "foodPrice": 8000,
+        "isComplete": true
+    },
+    {
+        "address": "Jl. Yos Sudarso No.18, Manado",
+        "image": "tinutuan",
+        "createDate": "2024-07-22",
+        "foodCategory": "Porridge",
+        "foodDescription": "Vegetable porridge served with salted fish.",
+        "foodName": "Tinutuan",
+        "foodPrice": 10000,
+        "isComplete": true
+    }
+]

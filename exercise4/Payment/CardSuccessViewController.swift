@@ -28,11 +28,7 @@ class CardSuccessViewController: UIViewController {
     containerView.layer.shadowRadius = 8
     cardView.layer.cornerRadius = 10
     cardView.layer.masksToBounds = true
-    
     containerBottomConstraint.constant = -containerView.frame.height
-    
-//    containerCenterConstraint.constant = (view.frame.size.height / 2) + (containerView.frame.size.height / 2)
-//
     view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(closeCardView)))
     view.backgroundColor = .black.withAlphaComponent(0)
   }
@@ -43,18 +39,14 @@ class CardSuccessViewController: UIViewController {
     UIView.animate(withDuration: 0.3) {
       self.view.backgroundColor = .black.withAlphaComponent(0.5)
       self.containerBottomConstraint.constant = 0
-//      self.containerCenterConstraint.constant = 0
       self.view.layoutIfNeeded()
-      
     }
   }
   
   @objc func closeCardView(){
-    print("clicked")
     UIView.animate(withDuration: 0.3) {
       self.view.backgroundColor = .black.withAlphaComponent(0)
       self.containerBottomConstraint.constant = -self.containerView.frame.size.height
-//      self.containerCenterConstraint.constant = (self.view.frame.size.height / 2) + (self.containerView.frame.size.height / 2)
       self.view.layoutIfNeeded()
     } completion:  { _ in
       self.dismiss(animated: false)

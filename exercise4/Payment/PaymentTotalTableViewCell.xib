@@ -71,6 +71,11 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="deliveryPriceLabel" destination="p53-vd-yQH" id="Y4G-0k-eMc"/>
+                <outlet property="subtotalPriceLabel" destination="SQj-jG-U04" id="wEE-uD-2m3"/>
+                <outlet property="totalPriceLabel" destination="Rdl-Fx-sAw" id="nl4-33-80t"/>
+            </connections>
             <point key="canvasLocation" x="-31.297709923664122" y="19.718309859154932"/>
         </tableViewCell>
     </objects>

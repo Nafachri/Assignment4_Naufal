@@ -17,6 +17,6 @@ class FeaturesPartnerCollectionReusableView: UICollectionReusableView {
     }
     
   func hideButton(_ hide: Bool) {
-    headerButton.isHidden = hide
+//    headerButton.isHidden = hide
   }
 }

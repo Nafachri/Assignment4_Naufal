@@ -11,12 +11,11 @@ class FoodOrderViewController: UIViewController, UITableViewDelegate, UITableVie
   
   @IBOutlet weak var tableView: UITableView!
   
-  var upcomingData: [Food] = [
-//    Food(name: "Ayam Kungpaw", description: "Ayam bakar madu buatan neng salsabilla", category: "Asian", price: 25000, isComplete: false, date: .now),
-//    Food(name: "Kungpaw Chicken", description: "Ayam kungpaw buatan mas amin sedap", category: "Parung Panjang", price: 30000,isComplete: false, date: .now),
-//    Food(name: "Pecel Ayam Gancit", description: "Rasa mantap harga murah", category: "Mongolian", price: 26000,isComplete: false, date: .now)
-  ]
-  var pastData =  [Food]()
+  var upcomingData = [Cart]()
+  var pastData =  [OrderHistory]()
+  
+  
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -27,7 +26,7 @@ class FoodOrderViewController: UIViewController, UITableViewDelegate, UITableVie
     
     tableView.separatorStyle = .none
     title = "Your Orders"
-    
+    print(upcomingData)
     loadFoodData()
     
     NotificationCenter.default.addObserver(forName: PaymentItemViewController.chekcoutNotification, object: nil, queue: .main) { [weak self] _ in
@@ -43,9 +42,8 @@ class FoodOrderViewController: UIViewController, UITableViewDelegate, UITableVie
   func loadFoodData() {
     let coredata = CoreDataManager.shared
     do{
-      pastData = try coredata.fetch(entity: FoodModel.self)
-        .map { $0.food() }
-      
+      pastData = try coredata.fetch(entity: OrderHistory.self)
+      upcomingData = try coredata.fetch(entity: Cart.self)
       tableView.reloadData()
     }
     catch {
@@ -73,6 +71,8 @@ class FoodOrderViewController: UIViewController, UITableViewDelegate, UITableVie
       button.setTitleColor(.systemGray2, for: .normal)
       button.titleLabel?.adjustsFontSizeToFitWidth = true
       button.titleLabel?.minimumScaleFactor = 0.5
+      button.addTarget(self, action: #selector(clearAllButtonTapped(_:)), for: .touchUpInside)
+
       headerView.addSubview(button)
     } else {
       label.text = "PAST ORDERS"
@@ -117,9 +117,28 @@ class FoodOrderViewController: UIViewController, UITableViewDelegate, UITableVie
     return footerView
   }
   
+  @objc func clearAllButtonTapped(_ sender: UIButton){
+    if upcomingData.count != 0 {
+      do {
+        try upcomingData.forEach { item in
+          try CoreDataManager.shared.delete(entity: item)
+        }
+        upcomingData = []
+        tableView.reloadData()
+      } catch {
+        print("Failed to delete Cart items: \(error.localizedDescription)")      }
+    }
+  }
+  
   @objc func footerButtonTapped(_ sender: UIButton) {
-    let paymentVC = PaymentItemViewController(nibName: "PaymentItemViewController", bundle: nil)
-    self.navigationController?.pushViewController(paymentVC, animated: true)
+    if upcomingData.count > 0 {
+      let paymentVC = PaymentItemViewController(cartItem: upcomingData)
+      _ = UINavigationController(rootViewController: paymentVC)
+      
+      let appDelegate = UIApplication.shared.delegate as? AppDelegate
+      let nav = appDelegate?.window?.rootViewController as? UINavigationController
+      nav?.pushViewController(paymentVC, animated: true)
+    }
   }
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -133,26 +152,24 @@ class FoodOrderViewController: UIViewController, UITableViewDelegate, UITableVie
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
     let cell = tableView.dequeueReusableCell(withIdentifier: "food_order_cell", for: indexPath) as! FoodOrderTableViewCell
-    let foodItem: Food
     if indexPath.section == 1 {
-      let food = pastData[indexPath.row]
-      cell.foodNameLabel.text = food.foodName
-      cell.foodDescLabel.text = food.foodDescription
-      cell.foodCategoryLabel.text = food.foodCategory
-      cell.foodPriceLabel.text = food.foodPrice?.idr
-      cell.createDateLabel.text = food.createDate?.formatted()
-      
+      let data = pastData[indexPath.row]
+      cell.foodImage.image = UIImage(named: data.food?.image ?? "")
+      cell.foodNameLabel.text = data.food?.foodName
+      cell.foodDescLabel.text = data.food?.foodDescription
+      cell.foodCategoryLabel.text = data.food?.foodCategory
+      cell.foodPriceLabel.text = data.food?.foodPrice.idr
+      cell.createDateLabel.text = data.orderDate?.formatted()
     }else {
       let upcomming = upcomingData[indexPath.row]
-      cell.foodNameLabel.text = upcomming.foodName
-      cell.foodDescLabel.text = upcomming.foodDescription
-      cell.foodCategoryLabel.text = upcomming.foodCategory
-      cell.foodPriceLabel.text = "\(upcomming.foodPrice)"
+      cell.foodImage.image = UIImage(named: upcomming.food?.image ?? "")
+      cell.foodNameLabel.text = upcomming.food?.foodName
+      cell.foodDescLabel.text = upcomming.food?.foodDescription
+      cell.foodCategoryLabel.text = upcomming.food?.foodName
+      cell.foodPriceLabel.text = upcomming.food?.foodPrice.idr
+      cell.createDateLabel.text = upcomming.food?.createDate?.formatted()
     }
-    
-    
     return cell
-    
   }
   
 }

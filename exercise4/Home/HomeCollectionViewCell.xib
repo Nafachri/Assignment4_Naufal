@@ -111,6 +111,11 @@
                 <constraint firstItem="fye-m6-Xfl" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="y9C-60-Igh"/>
             </constraints>
             <size key="customSize" width="232" height="186"/>
+            <connections>
+                <outlet property="foodCategoryLabel" destination="7Aq-qh-nrp" id="Rgl-Zv-KYD"/>
+                <outlet property="foodImageView" destination="fye-m6-Xfl" id="s03-lQ-4uO"/>
+                <outlet property="foodNameLabel" destination="chO-hb-1cZ" id="9Or-u0-bK8"/>
+            </connections>
             <point key="canvasLocation" x="-30.534351145038165" y="68.309859154929583"/>
         </collectionViewCell>
     </objects>
