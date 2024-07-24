@@ -187,6 +187,7 @@
 		7F054FED2C44DCEC00EFEB23 = {
 			isa = PBXGroup;
 			children = (
+				7F54A72F2C50ACD900492327 /* Gif */,
 				7F054FF82C44DCEC00EFEB23 /* exercise4 */,
 				7F054FF72C44DCEC00EFEB23 /* Products */,
 				7FBD63C02C4A60DD0048DB50 /* Frameworks */,
@@ -204,7 +205,6 @@
 		7F054FF82C44DCEC00EFEB23 /* exercise4 */ = {
 			isa = PBXGroup;
 			children = (
-				7F54A72F2C50ACD900492327 /* Gif */,
 				7F16E04D2C4EA313002233F6 /* data */,
 				7F16E0332C4E3F10002233F6 /* OnBoarding */,
 				7FA849FB2C4ACF6E00CBC6DD /* Profile */,
