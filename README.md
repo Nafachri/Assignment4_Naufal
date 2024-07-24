@@ -36,7 +36,7 @@ Here are some GIFs demonstrating the application screens and features:
 
 | Onboarding | Login | Profile | Dashboard | Food Orders |
 |------------|-------|-----------------|-----------|-------------|
-| ![Onboarding](exercise4/Gif/onboarding.gif) | ![Login](exercise4/Gif/login.gif) | ![Forgot Password](exercise4/Gif/profile.gif) | ![Dashboard](exercise4/Gif/dashboard.gif) | ![Food Orders](exercise4/Gif/order.gif) |
+| ![Onboarding](Gif/onboarding.gif) | ![Login](Gif/login.gif) | ![Forgot Password](Gif/profile.gif) | ![Dashboard](Gif/dashboard.gif) | ![Food Orders](Gif/order.gif) |
 
 
 ## Data Persistence
