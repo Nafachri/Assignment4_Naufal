@@ -1,6 +1,8 @@
-# Swift Food Ordering Application
+# Swift Food Ordering Application With MVVM Design Pattern
 
 This is a Swift-based iOS application that allows users to order food online. The application includes features like user authentication, profile management, food ordering, and payment processing.
+
+and the MVVM is applied on  Login, Change Password, Sign Up and Profile Features
 
 ## Screens
 
