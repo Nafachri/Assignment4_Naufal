@@ -64,7 +64,3 @@ git clone https://github.com/your-username/your-repo-name.git
 cd your-repo-name
 open YourProjectName.xcodeproj
 ```
-
-## License
-
-This project is licensed under the WTFPL License - see the [WTFPL](http://www.wtfpl.net/about/) file for details.
